@@ -104,9 +104,12 @@
 
       function deleteColumn(){
         let table = document.getElementById("myTable")
-        let row = table.rows;
-        let x = document.getElementById("tableRow");
-        x[0].innerHTML = "OK"
+          let row = table.rows;
+
+          for(let i =0; i < row.length; i++)
+          {
+            let cell = row[i].deleteCell(0)
+          }
         numOfColumn--;
       }
      
