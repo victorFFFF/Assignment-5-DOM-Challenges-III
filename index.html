@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Assignment 5</title>
+  </head>
+  <body>
+    <div id="buttons-div">
+      <div>
+        <button onClick="addRows()">Add a new row</button>
+      </div>
+      <div>
+        <button onClick="addColum()">Add a new column</button>
+      </div>
+      <div>
+        <button onClick="removeRow()">Remove a row</button>
+      </div>
+      <div>
+        <button onClick="removeColumn()">Remove a column</button>
+      </div>
+	   <div>
+      <br />
+      <span>Pick a Color:</span>
+      <select onchange="selectColor(this.value)">
+	    <option value="yellow">Black</option>
+        <option value="red">Red</option>
+		 <option value="yellow">Pink</option>
+        <option value="yellow">Brown</option>
+        <option value="orange">Orange</option>
+        <option value="green">Green</option>
+		 <option value="yellow">Yellow</option>
+		 <option value="blue">Blue</option>
+        <option value="blue">White</option>
+	 <option value="blue">Cyan</option>
+      </select>
+    </div>
+	   </br>
+      <div>
+        <button onClick="fillAllUncolored()">Fill all uncolored cells</button>
+      </div>
+      <div>
+        <button onClick="fillAllCells()">Color all cells</button>
+      </div>
+      <div>
+         <button onClick="restoreCellsColor()">Restore initial color of cells</button>
+       </div>
+    </div>
+    <table id="table">
+	</table>
+
+  </body>
