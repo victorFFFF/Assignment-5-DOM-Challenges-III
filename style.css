@@ -56,3 +56,7 @@ td {
 #black{
     background-color: black;
 }
+
+table, td {
+    border: 1px solid black;
+  }
