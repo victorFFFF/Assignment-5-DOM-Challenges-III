@@ -57,8 +57,8 @@
 <p>Click the button to add a new row at the first position of the table and then add cells and content.</p>
 
 <table id="myTable">
-  <tr>
-    <td>First Cell</td>
+  <tr id="tableRow">
+    <td></td>
   </tr>
 
 </table>
@@ -66,6 +66,8 @@
 
 <button type="button" onclick="addRow()">Add Row</button>
 <button type="button" onclick="addColumn()">Add Column</button>
+<button type="button" onclick="deleteRow()"> Delete Row</button>
+<button type="button" onclick="deleteColumn()"> Delete Column</button>
 
 
 <script>
@@ -76,12 +78,11 @@
         let table = document.getElementById("myTable");
         let row = table.insertRow(0);
         let cell1 = row.insertCell(0);
-        cell1.innerHTML = "new cell";
             
         for(let i = 1; i < numOfColumn; i++)
         {
             cell1 = row.insertCell(0)
-            cell1.innerHTML = "new cell "
+            //cell1.innerHTML = "new cell "
 
         }
       }
@@ -92,9 +93,21 @@
           for(let i =0; i < row.length; i++)
           {
             let cell = row[i].insertCell(0)
-            cell.innerHTML = "new cell"
+            //cell.innerHTML = "new cell"
           }
           numOfColumn++;
+      }
+
+      function deleteRow(){
+        document.getElementById("myTable").deleteRow(0);
+      }
+
+      function deleteColumn(){
+        let table = document.getElementById("myTable")
+        let row = table.rows;
+        let x = document.getElementById("tableRow");
+        x[0].innerHTML = "OK"
+        numOfColumn--;
       }
      
 
